@@ -1,0 +1,79 @@
+## My config for nano version 8.4
+
+## Syntax highlighting
+include /usr/share/nano/*.nanorc    # Bật highlight cú pháp cho các ngôn ngữ có sẵn
+
+## Backup & History
+set backup                          # Tạo file backup (thêm ~) mỗi khi lưu
+set backupdir "~/.backup"           # Thư mục chứa các file backup
+set historylog                      # Lưu lịch sử tìm kiếm/thay thế giữa các phiên
+set locking                         # Tạo file .swp khi mở, ngăn chỉnh sửa đồng thời
+
+## Display
+set minibar                         # Gộp title bar và thông tin file vào một dòng
+set stateflags                      # Hiển thị cờ trạng thái ở góc phải trên (I/M/L/R/S)
+set constantshow                    # Luôn hiện vị trí con trỏ (dòng/cột) ở thanh trạng thái
+set linenumbers                     # Hiển thị số dòng bên trái
+set indicator                       # Hiển thị thanh cuộn mini bên phải
+set emptyline                       # Thêm dòng trống giữa title bar và nội dung
+set boldtext                        # Dùng chữ đậm thay vì đảo màu cho các thanh UI
+set nohelp                          # Ẩn 2 dòng phím tắt phía dưới (bật/tắt: Alt+X)
+set whitespace "»·"                 # Hiển thị tab (») và khoảng trắng cuối dòng (·)
+
+## Colors
+set errorcolor brightwhite,red      # Màu thanh trạng thái khi có lỗi
+set statuscolor cyan,normal         # Màu thanh trạng thái
+set selectedcolor brightwhite,blue  # Màu vùng text được chọn
+set numbercolor cyan,normal         # Màu số dòng
+set keycolor cyan,normal            # Màu phím tắt trong dòng help
+set spotlightcolor black,lightyellow  # Màu highlight kết quả tìm kiếm
+
+## Editing
+set autoindent                      # Tự động thụt lề theo dòng trước
+set tabsize 2                       # Độ rộng tab = 2
+set tabstospaces                    # Chèn space thay vì ký tự tab khi nhấn Tab
+set trimblanks                      # Xoá khoảng trắng thừa cuối dòng khi lưu
+set zap                             # Gõ text mới thay thế vùng đang bôi đen
+set matchbrackets "(<[{)>]}"        # Nhảy tới ngoặc đối xứng bằng Alt+]
+set multibuffer                     # Mở nhiều file trong buffer riêng (Ctrl+R mở, Alt+< Alt+> chuyển)
+set colonparsing                    # Cho phép mở file theo dòng/cột: nano file:dòng:cột
+
+## Wrapping
+set softwrap                        # Dòng dài tự xuống hàng trên màn hình (không thêm ký tự vào file)
+set atblanks                        # Ngắt dòng tại khoảng trắng thay vì giữa chữ
+
+## File format
+set noconvert                       # Không tự chuyển đổi DOS (\r\n) / Mac (\r) sang Unix (\n)
+set nonewlines                      # Không tự thêm dòng trống cuối file khi lưu
+
+## Navigation & Input
+set mouse                           # Bật chuột: click đặt con trỏ, double-click chọn, cuộn
+
+## Windows-style keybindings
+bind ^S savefile main               # Ctrl+S  Lưu
+bind ^Z undo main                   # Ctrl+Z  Hoàn tác
+bind ^Y redo main                   # Ctrl+Y  Làm lại
+bind ^X cut main                    # Ctrl+X  Cắt
+bind ^C copy main                   # Ctrl+C  Sao chép
+bind ^V paste all                   # Ctrl+V  Dán
+bind ^Q exit all                    # Ctrl+Q  Thoát
+bind ^F whereis all                 # Ctrl+F  Tìm kiếm
+bind ^G findnext all                # Ctrl+G  Tìm tiếp
+
+## Setup later
+# bind M-F formatter main           # Alt+F  Chạy formatter
+# bind M-B linter main              # Alt+B  Chạy linter
+
+## Optional
+# set fill -8                        # Hard-wrap tại cột (chiều rộng màn hình - 8)
+# set bookstyle                      # Dòng trống mới bắt đầu đoạn văn mới (cho justify)
+# set brackets ""')>]}"              # Định nghĩa ngoặc đóng cho kết thúc câu (Alt+( Alt+))
+# set guidestripe 80                 # Đường kẻ dọc ở cột 80 làm mốc xuống dòng
+# set jumpyscrolling                 # Cuộn nửa màn hình thay vì từng dòng
+# set magic                          # Dùng libmagic đoán ngôn ngữ khi file không có đuôi mở rộng
+# set operatingdir "/home/user/"     # Giới hạn đọc/ghi file trong thư mục này (sandbox)
+# set regexp                         # Mặc định tìm kiếm bằng regex thay vì raw text
+# set casesensitive                  # Tìm kiếm phân biệt hoa/thường
+# set smarthome                      # Home nhảy tới ký tự đầu (không phải whitespace), nhấn lần nữa về cột 0
+# set unix                           # Luôn lưu file định dạng Unix (\n)
+# set zero                           # Ẩn toàn bộ thanh, chỉ để vùng soạn thảo

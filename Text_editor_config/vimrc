@@ -1,0 +1,34 @@
+" My config for vim version 9.1
+
+" Syntax & Filetype
+syntax on                           " Bật highlight cú pháp
+filetype plugin indent on           " Nhận diện filetype, load indent theo ngôn ngữ
+
+" Display
+set number                          " Hiển thị số dòng
+set cursorline                      " Highlight dòng đang đứng
+set ruler                           " Hiện vị trí con trỏ (dòng/cột) ở góc dưới phải
+set showmatch                       " Nhấp nháy ngoặc đối xứng khi gõ ngoặc đóng
+set showcmd                         " Hiện lệnh đang gõ dở ở góc dưới phải
+set laststatus=2                    " Luôn hiện thanh trạng thái
+set scrolloff=5                     " Luôn giữ 5 dòng trên/dưới con trỏ
+set wildmenu                        " Menu gợi ý khi nhấn Tab trong command mode
+
+" Search
+set hlsearch                        " Highlight tất cả kết quả tìm kiếm
+set incsearch                       " Tìm tức thì khi đang gõ
+set ignorecase                      " Tìm không phân biệt hoa/thường
+set smartcase                       " Nếu gõ có chữ hoa thì tự phân biệt
+
+" Editing
+set autoindent                      " Tự thụt lề theo dòng trước
+set tabstop=2                       " Hiển thị tab rộng 2 space
+set shiftwidth=2                    " Mỗi cấp thụt lề = 2 space
+set expandtab                       " Nhấn Tab chèn space thay vì ký tự tab
+set smarttab                        " Tab ở đầu dòng theo shiftwidth, ở giữa theo tabstop
+set backspace=indent,eol,start      " Backspace hoạt động bình thường trong insert mode
+set mouse=a                         " Bật chuột ở mọi chế độ
+
+" File
+set encoding=utf-8                  " Mã hoá UTF-8
+set autoread                        " Tự reload file khi bị sửa từ bên ngoài
