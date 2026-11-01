@@ -1,5 +1,8 @@
 ## My config for nano version 8.4
 
+## Tip
+# Hold shift if want to copy text to clipboard
+
 ## Syntax highlighting
 include /usr/share/nano/*.nanorc    # Bật highlight cú pháp cho các ngôn ngữ có sẵn
 
@@ -59,6 +62,12 @@ bind ^V paste all                   # Ctrl+V  Dán
 bind ^Q exit all                    # Ctrl+Q  Thoát
 bind ^F whereis all                 # Ctrl+F  Tìm kiếm
 bind ^G findnext all                # Ctrl+G  Tìm tiếp
+
+bind ^P scrollup main
+bind ^N scrolldown main
+
+bind M-u pageup main
+bind M-d pagedown main
 
 ## Setup later
 # bind M-F formatter main           # Alt+F  Chạy formatter

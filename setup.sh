@@ -33,7 +33,7 @@ cp -r nvim/ ~/.config/nvim
 
 mkdir -p ~/.backup
 sudo cp Text_editor_config/nanorc /etc/nanorc
-sudo cp Text_editor_config/vimrc /etc/vim/vimrc.local
+sudo cp Text_editor_config/vimrc.local /etc/vim/vimrc.local
 
 echo "--------------------------------------------"
 
