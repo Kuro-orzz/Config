@@ -19,7 +19,7 @@ echo "--------------------------------------------"
 # Oh-my-posh
 echo "----------Setup oh-my-posh theme------------"
 sudo apt install unzip bsdextrautils -y
-curl -s https://ohmyposh.dev/install.sh | bash -s
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
 mkdir -p ~/.config/oh-my-posh
 curl -fsSL -o ~/.config/oh-my-posh/theme.omp.json https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/json.omp.json
 
@@ -36,7 +36,6 @@ echo "--------------------------------------------"
 
 # Config
 echo "------------Setup config file---------------"
-
 mkdir -p ~/.config
 cp -r "$DIR/ghostty/." ~/.config/ghostty/
 cp -r "$DIR/nvim/." ~/.config/nvim/
@@ -45,7 +44,6 @@ cp -r "$DIR/bash/." ~/.config/bash/
 mkdir -p ~/.backup
 sudo cp "$DIR/Text_editor_config/nanorc" /etc/nanorc
 sudo cp "$DIR/Text_editor_config/vimrc.local" /etc/vim/vimrc.local
-
 echo "--------------------------------------------"
 
 

@@ -1,7 +1,7 @@
 # By default Reload config with shft + cmd + , 
 config-file = themes/rosepine 
 #background = #000000
-background-image = "/home/test/.config/ghostty/bg_img/7vfpla.jpg"
+background-image = "$HOME/.config/ghostty/bg_img/7vfpla.jpg"
 background-image-opacity = 0.05
 background-opacity = 1.0
 background-blur-radius = 25
